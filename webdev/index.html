@@ -1,8 +1,32 @@
 <html>
 <head>
 <title>web dev test</title>
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+<style type="text/css">
+#myElement {
+  background: silver;
+  height: 300px;
+  text-align: center;
+  font: 30px/300px Helvetica, Arial, sans-serif;
+  </style>
+  <script>
+  var myElement = document.getElementById('myElement');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// listen to events...
+mc.on("panleft panright tap press", function(ev) {
+    myElement.textContent = ev.type +" gesture detected.";
+});
+  </script>
 </head>
 <body>
-Hello world
+Swipe Test
+
+<div id="myElement"></div>
 </body>
 </html>
