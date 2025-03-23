@@ -11,12 +11,15 @@
   text-align: center;
   font: 30px/300px Helvetica, Arial, sans-serif;
   </style>
+  
   <script>
   var myElement = document.getElementById('myElement');
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
 var mc = new Hammer(myElement);
+
+console.log("before listening event");
 
 alert("before listening event");
 
@@ -25,6 +28,7 @@ mc.on("panleft panright tap press", function(ev) {
     myElement.textContent = ev.type +" gesture detected.";
 });
 
+console.log("after listening event");
 alert("after listening event");
 
   </script>
