@@ -18,10 +18,15 @@
 // by default, it only adds horizontal recognizers
 var mc = new Hammer(myElement);
 
+alert("before listening event");
+
 // listen to events...
 mc.on("panleft panright tap press", function(ev) {
     myElement.textContent = ev.type +" gesture detected.";
 });
+
+alert("after listening event");
+
   </script>
 </head>
 <body>
