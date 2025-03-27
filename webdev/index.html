@@ -2,7 +2,9 @@
  <head>
   <title>swipe test</title>
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
 <script src="scripts/hammer.js"></script>
 <!--<script src="https://hammerjs.github.io/dist/hammer.js"></script>-->
 
@@ -13,6 +15,15 @@
   text-align: center;
   font: 30px/300px Helvetica, Arial, sans-serif;
 }
+
+#divProfile
+{
+  background: red;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  font: Helvetica, Arial, sans-serif;
+}
 </style>
   
 <script>
@@ -22,16 +33,38 @@ function bindSwipe()
   
   // create a simple instance
   // by default, it only adds horizontal recognizers
-  var mc = new Hammer(myElement);
+  var hammerProfile = new Hammer(document.getElementById('divProfile'));
 
-  // listen to events...
-  mc.on("panleft panright tap press", function(ev) {
+  hammerProfile.on("panleft panright", function(ev) {
     myElement.textContent = ev.type +" gesture detected.";
+    if (ev.type == "panleft")
+    {
+      var options = { direction: 'left' };
+    }
+    else if (ev.type == "panright")
+    {
+      var options = { direction: 'right' };
+    }
+    $("#divProfile").effect("drop", options, 1000, swipeComplete);
+    console.log("swipe " + ev.type + " occured");
   });
-  console.log("swipe binding successful")
+  //console.log("swipe binding successful")
 }
 
+$( document ).ready(function() {
+    console.log("jquery ready!");
+});
 
+function swipe()
+{
+   var options = { direction: 'right' };
+  $("#divProfile").effect("drop", options, 1000, swipeComplete);
+}
+
+function swipeComplete()
+{
+  console.log("swipe complete");
+}
 
   </script>
 </head>
@@ -39,5 +72,8 @@ function bindSwipe()
 Swipe Test
 
 <div id="myElement"></div>
+<div id="divProfile"><img src="images/profile.webp"></div>
+<br/><br/><br/><br/>
+<input type="button" onclick="swipe();" value="manual swipe"/>
 </body>
 </html>
