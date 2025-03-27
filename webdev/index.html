@@ -1,9 +1,10 @@
 <html>
-<head>
-<title>web dev test</title>
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+ <head>
+  <title>swipe test</title>
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 
 <script src="scripts/hammer.js"></script>
+<!--<script src="https://hammerjs.github.io/dist/hammer.js"></script>-->
 
 <style type="text/css">
 #myElement {
@@ -15,32 +16,26 @@
 </style>
   
 <script>
-alert("page init");
-  console.log("script start");
-  
-  
+function bindSwipe()
+{
   var myElement = document.getElementById('myElement');
+  
+  // create a simple instance
+  // by default, it only adds horizontal recognizers
+  var mc = new Hammer(myElement);
 
-// create a simple instance
-// by default, it only adds horizontal recognizers
-var mc = new Hammer(myElement);
-
-console.log("before listening event");
-
-alert("before listening event");
-
-// listen to events...
-mc.on("panleft panright tap press", function(ev) {
+  // listen to events...
+  mc.on("panleft panright tap press", function(ev) {
     myElement.textContent = ev.type +" gesture detected.";
-});
+  });
+  console.log("swipe binding successful")
+}
 
-console.log("after listening event");
-alert("after listening event");
 
 
   </script>
 </head>
-<body>
+<body onload="bindSwipe();">
 Swipe Test
 
 <div id="myElement"></div>
