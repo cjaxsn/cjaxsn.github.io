@@ -27,13 +27,15 @@
 </style>
   
 <script>
+  var hammerProfile;
+
 function bindSwipe()
 {
   var myElement = document.getElementById('myElement');
-  
+  var hammerProfile = new Hammer(document.getElementById('divProfile'));
   // create a simple instance
   // by default, it only adds horizontal recognizers
-  var hammerProfile = new Hammer(document.getElementById('divProfile'));
+  
 
   hammerProfile.on("panleft panright", function(ev) {
     myElement.textContent = ev.type +" gesture detected.";
@@ -46,10 +48,19 @@ function bindSwipe()
       var options = { direction: 'right' };
     }
     $("#divProfile").effect("drop", options, 1000, swipeComplete);
+    
     console.log("swipe " + ev.type + " occured");
+    hammerProfile.destroy();
   });
   //console.log("swipe binding successful")
 }
+
+/*
+hammerProfile.off()
+{
+  console.log("off the swipe");
+  hammerProfile.destroy();
+}*/
 
 $( document ).ready(function() {
     console.log("jquery ready!");
@@ -64,8 +75,8 @@ function swipe()
 function swipeComplete()
 {
   console.log("swipe complete");
-  document.getElementById("divProfile").style.display = "none";
-  console.log("hide complete");
+  //document.getElementById("divProfile").style.display = "none";
+  console.log("callback complete");
   //$("#divProfile").hide();
 }
 
