@@ -1,0 +1,82 @@
+Corey Jackson
+SUDBURY, ONTARIO  • 705-885-5432 • cjaxsn@gmail.com • https://coreyjackson.tech
+
+PROFILE
+A dynamic senior IT professional with over 20 years experience in information technology with focuses in management, project management, security, architecture, networking, systems analysis, integration, automation, development, quality assurance, & support in bothprivate and public sectors.  My various experiences are summarized within this cv, however, a detailed listing of my experiences can be found on my online resume located at https://coreyjackson.tech.
+
+SOFT SKILLS
+    • Leadership, team building, decision making, mentoring, negotiation, and presentation skills
+    • Innovative, creative, responsible, cooperative, hard working, versatile, flexible, and adaptable
+    • Possess strong organizational, time management, conflict management, and analytical thinking skills
+    • Written and oral communication skills in English and French languages
+
+TECHNICAL / HARD SKILLS
+Management: Strategic planning, department & product management, budgeting, performance management
+Project Management: Agile, Waterfall, Scrum, Scheduling, Prioritization, JIRA, MS Project, Primavera
+Architecture: TOGAF, SDLC, process mapping, data modeling, service oriented architecture (SOA)
+Security: Vulnerability Management, Penetration Testing, Ethical Hacking, System Harderning, Information Security, Secure Application Development, Password Management, NIST 800-x, ISO 27001, PCI DSS, 2FA/MFA/U2F, OAuth, SSO, SAML, SSL/TLS, AES, PGP, CORS, CSRF, XSS, Email and Web Security Gateways, DLP, DMARC, Kali Linux, FileAudit Plus, Netwrix, Nmap, Nessus, Metasploit, Nikto
+Cloud & Server Computing: IaaS, PaaS, Saas, AWS, Azure, Digital Ocean, Scale, VMWare, VirtualBox
+DevOps: Bamboo, BitBucket, Git, SourceTree, TortoiseGit, Bash, Shell, PowerShell, Kubernetes
+Development Languages/Technologies: .NET/Core, API’s, Python, JSON, ASP,JSP,PHP, Perl, CSS, HTML, XML, AJAX, Bootstrap, jQuery, React, AngularJS, node.js, Java, JavaScript, Groovy, C#, Git, SPA, PWA
+Data Applications/Technologies: 
+NoSQL – CouchDB, PouchDB, IndexedDB, MongoDB
+RDBMS - MS SQL Server, MariaDB, MySQL, Oracle, SQLLite, ADO, DAO, ODBC, OLEDB, SQL
+Data historians/products: AspenTech Setcim, OSISoft PI, PI-ACE, PI-AF, PI Batch, PI Coresight, PI-PE, DataLink, PI Manual Logger, ProcessBook, PI WebParts, Totalizers
+OT/Process Control: SCADA, DCS, InFusion, Wonderware, Foxboro, PLCs, RSView, HMI’s
+Networking: WAN,LAN,VLAN,MESH,UTM,ASA,Firewalls,Routers,Gateways,Switches,Hubs,Bridges, Access Points, Print Servers, Proxies,VPN,DHCP,DNS,WINS,TCP/IP,IPSEC,IPS/IDS,ACLs,QoS, SSH, STP, NTP, SNMP, RADIUS, SIP, VOIP, SIEM, Satellite and Cellular comm, Cabling (CAT5/6), IP Cameras,FreePBX, SolSwitch, wireless network optimization, interior and exterior network installation
+Networking Tools: inSSIDer, NetSpot, NetLimiter, PTRG, PuTTY, Nmap, Wireshark, tcpdump, iPerf 
+Web Servers and Remote Tools: Apache, NGINX, IIS, Tomcat, Team Viewer, Anydesk, VNC, RDP
+Operating Systems: Linux, Unix, Mac OS, iOS, Android, Windows 3.xx-10/Server 2000-2016, VMS, DOS
+Design/Estimating: UML, ERD, DFD, Visio, Draw.io, AutoCAD, Revit, SketchUp, Accubid, WinEst
+Reporting: ActiveReports, Business Objects, Crystal Reports, Pentaho, Power BI, SSRS, SharePoint
+
+WORK EXPERIENCE
+Sofvie Inc. 2019-2020 
+Product & Service Supervisor
+    • Managed direct reports in various roles of product development and the agile project development plan
+    • Supervised direct reports in the support and service of customers and internal staff
+    • Supervised direct reports in continuous delivery and integration of products (DevOps)
+    • Managed best practices and standards in the product development of a secure risk management system
+    • Lead product quality assurance and implementation of automated testing framework
+    • Participated in product hosting strategy (cloud, on premise, hybrid)
+
+TESC Contracting Company Ltd. & SWSE Athletic Teams        2015-2019
+IT Manager
+    • Defined and implemented the IT strategic initiatives based upon the company’s annual strategic business plan
+    • Defined company growth objectives in partnership with the business
+    • Built trusting relationships with key stakeholders serving as an advisor of technologies to improve effectiveness
+    • Defined technology roadmaps and overall technology vision
+    • Drove collaboration across multiple teams, business units and phases, aligning IT Systems with business operations
+    • Managed projects including the assessment of requirements, provisions of functional deliverables, milestone planning, project closure, and lessons learned
+    • Managed comprehensive IT portfolio and IT projects with direct reports and 3rd party resources
+    • Managed an IT helpdesk for 200 users utilizing ITIL framework for incident and problem management
+    • Defined and implemented the IT strategic initiatives based upon the company’s annual strategic business plan
+    • Implemented cost saving solutions in IT and ares of business, new technologies, policies, procedures, and standards
+    • Managed IT infrastructure (servers, storage, backups, security systems), software, licenses, and contracts
+    • Implemented a security risk management framework including management, operational and physical security
+    • Managed the implementation of several key IT projects:
+    • Digital transformation, global enterprise wireless network, standard video conferencing and collaboration system, inventory management systems (IT and specific business areas), safety management information system, company intranet, global VoIP system
+
+Vale Canada Limited   2009-2015
+IT Subject Matter Expert / IT Project Manager
+    • Managed a team of developers including project budgets, schedules and training development
+    • Implemented best practices, standards, and product roadmaps for areas of expertise
+    • Managed the implementation of many IT projects such as: computerized mould tracking system, redundant data collection system from the Smelter process control network to business network, division wide production information reporting system ( KPI’s and real-time information), computerized systems for the atmospheric emissions reduction (AER) program, smelting converter aisle monitoring system, migration of Setcim data historian to OSISoft PI historian, applications using OSISoft technologies
+    • Product lead on SAP Manufacturing Integration and Intelligence (MII)
+
+Vale Canada Limited 2005-2009
+Process Systems Analyst
+    • Design, develop, test, deliver and support information and process control systems
+    • Implemented new technologies into business applications, business requirements analysis/translation
+    • Lead IT contractors and projects, served as mentor to colleagues
+
+EDUCATION
+Georgian College (Diploma, 3 Year Computer Programmer/Analyst Co-op w/ Honours)  1999-2002
+Lo-Ellen Park Secondary School (Ontario Secondary School Diploma w/Honours)          1994-1999
+
+LICENSES & CERTIFICATIONS
+     CompTIA Network+,  CompTIA 02/2021
+     CompTIA Project+,  CompTIA 09/2020
+     CompTIA PenTest+,  CompTIA 09/2020
+     CompTIA Security+,  CompTIA 08/2020
+     Effective Leadership Development, LMI Canada 03/2016
