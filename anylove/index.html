@@ -50,11 +50,7 @@ hammerProfile.off()
 
 $( document ).ready(function() {
     console.log("jquery ready!");
-    if (navigator.mediaDevices?.getUserMedia) {
-  console.log("camera access supported");
-        alert("camera access supported");
-    } else {
-  console.log("navigator.mediaDevices.getUserMedia() is not supported");
+    
 }
 });
 
@@ -91,6 +87,10 @@ function swipeComplete()
        text-align: center;
        font: Helvetica, Arial, sans-serif;
      }
+      #divProfileBlur
+      {
+          filter: blur(5px);
+      }
    </style>
  </head>
  <body onload="bindSwipe();">
@@ -118,6 +118,7 @@ Canadian English content...
 <div lang="nl-NL">
 dit is in het Nederlands geschreven
 </div>
-   
+Blur test
+     <div id="divProfileBlur" onclick="javascript: this.style.webkitFilter='blur(0px)'"><img src="images/profile.webp"></div>
  </body>
 </html>
