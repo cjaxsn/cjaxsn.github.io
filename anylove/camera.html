@@ -146,12 +146,34 @@ async function sourceSelected(audioSource, videoSource) {
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
 
-      const data = canvas.toDataURL("image/png");
+      const data = canvas.toDataURL("image/webp");
       photo.setAttribute("src", data);
+        saveToBlob();
     } else {
       clearPhoto();
     }
   }
+    
+    function saveToBlob()
+    {
+        const canvas = document.getElementById("canvas");
+
+canvas.toBlob((blob) => {
+    const reader = new FileReader();
+  const newImg = document.createElement("img");
+  const url = URL.createObjectURL(blob);
+    document.getElementById("divBlobSize").innerHTML = blob.size;
+    document.getElementById("divBlobData").innerHTML = blob.text();
+
+
+  newImg.src = url;
+  document.body.appendChild(newImg);
+});
+
+        
+
+    }
+    
 
   // Set up our event listener to run the startup process
   // once loading is complete.
@@ -166,6 +188,8 @@ async function sourceSelected(audioSource, videoSource) {
   <div class="camera">
     <video id="video">Video stream not available.</video>
     <button id="start-button">Take photo</button>
+      <div id="divBlobSize"></div>
+      <div id="divBlobData"></div>
   </div>
   <canvas id="canvas" style="display: none;"> </canvas>
   <div class="output">
