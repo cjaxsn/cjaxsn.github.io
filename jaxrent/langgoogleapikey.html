@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+        function start() {
+            // Initializes the client with the API key and the Translate API.
+            gapi.client.init({
+                'apiKey': 'AIzaSyBZ74oUzbj7rjjrff-L5QKh2ereQbugRko',
+                'clientId': '834817355162-et4c65tspaboppjf2gj27q316fc7bh6j.apps.googleusercontent.com',
+                'scope':'cloud-language'
+            }).then(function() {
+                // Executes an API request, and returns a Promise.
+                // The method name `language.translations.list` comes from the API discovery.
+
+                /*
+                return gapi.client.language.translations.list({
+
+                    q: 'hello world',
+                    source: 'en',
+                    target: 'fr-CA',
+                });
+                 */
+
+                return gapi.client.request({
+                    'path': 'https://translation.googleapis.com/language/translate/v2',
+                    'method': 'POST',
+                    'params':'q=hello,source=en,target=fr-CA'
+                })
+
+            }).then(function(response) {
+                console.log(response.result);
+                //console.log(response.result.data.translations[0].translatedText);
+            }, function(reason) {
+                console.log('Error: ' + reason.result.error.message);
+            });
+        };
+
+        // Loads the JavaScript client library and invokes `start` afterwards.
+        gapi.load('client', start);
+    </script>
+</head>
+<body>
+<div id="results"></div>
+</body>
+</html>
