@@ -1,2 +1,2 @@
-/*
-  Content-Security-Policy: script-src 'self' https://www.gstatic.com https://gstatic.com
+/jaxrent/*
+  Content-Security-Policy: script-src 'self' https://www.gstatic.com https://gstatic.com https://apis.google.com
