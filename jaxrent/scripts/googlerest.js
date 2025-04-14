@@ -3,7 +3,7 @@ function test()
     const outputElement = document.getElementById('output');
 
     const apiKey = 'AIzaSyBZ74oUzbj7rjjrff-L5QKh2ereQbugRko';
-    const apiUrl = 'https://translation.googleapis.com/language/translate/v2?key=AIzaSyBZ74oUzbj7rjjrff-L5QKh2ereQbugRko';
+    const apiUrl = 'https://translation.googleapis.com/language/translate/v2?key=AIzaSyDAL-P6lY5iERPG63rGIls1ZEYlzGMOjbY';
 
     const requestOptions = {
         method: 'POST',
