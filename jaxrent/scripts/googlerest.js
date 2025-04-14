@@ -1,3 +1,4 @@
+
 function translateTest()
 {
     const outputElement = document.getElementById('output');
@@ -60,7 +61,10 @@ function displayLanguage()
             return response.json();
         })
         .then(data => {
-            outputElement.textContent = JSON.stringify(data, null, 2);
+            JSONData = JSON.stringify(data, null);
+            outputElement.textContent = JSONData;
+            let strLang = JSONdata.find(lang => lang.language === "en");
+            console.log(lang["name"]);
         })
         .catch(error => {
             console.error('Error:', error);
