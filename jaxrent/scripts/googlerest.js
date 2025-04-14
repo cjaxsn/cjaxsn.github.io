@@ -8,7 +8,7 @@ function test()
         method: 'POST',
         /*mode: 'no-cors',*/
         headers: {
-            'x-goog-user-project': 'jaxrent',
+            /*'x-goog-user-project': 'jaxrent',*/
             'Content-Type': 'application/json; charset=utf-8'
         },
         body: JSON.stringify({
