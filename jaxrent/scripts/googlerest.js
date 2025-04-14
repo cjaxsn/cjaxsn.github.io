@@ -37,7 +37,7 @@ function displayLanguage()
 {
     const outputElement = document.getElementById('divLanguageDisplay');
 
-    const apiUrl = 'POST https://translation.googleapis.com/language/translate/v2/languages?key=AIzaSyDAL-P6lY5iERPG63rGIls1ZEYlzGMOjbY';
+    const apiUrl = 'https://translation.googleapis.com/language/translate/v2/languages?key=AIzaSyDAL-P6lY5iERPG63rGIls1ZEYlzGMOjbY';
 
     const requestOptions = {
         method: 'POST',
