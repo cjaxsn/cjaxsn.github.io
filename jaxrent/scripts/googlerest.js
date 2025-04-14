@@ -22,7 +22,7 @@ function test()
         .then(response => {
             if (!response.ok) {
                 console.log("response.status=" + response.status + "response.statusText=" + response.statusText + "response.URL=" + response.URL);
-                throw new Error('Network response was not ok');
+                throw new Error(`Network response was not ok, status code ${response.status}`);
             }
             return response.json();
         })
