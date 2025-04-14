@@ -45,7 +45,7 @@ function displayLanguage()
             'Content-Type': 'application/json; charset=utf-8'
         },
         body: JSON.stringify({
-            target: 'zh-TW'
+            target: 'de'
         })
     };
 
