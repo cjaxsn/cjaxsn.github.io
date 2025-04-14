@@ -45,7 +45,7 @@ function displayLanguage()
             'Content-Type': 'application/json; charset=utf-8'
         },
         body: JSON.stringify({
-            target: document.getElementById('txtLanguage');
+            target: document.getElementById('txtLanguage').value
         })
     };
 
