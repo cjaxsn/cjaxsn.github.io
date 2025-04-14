@@ -13,10 +13,10 @@ function test()
             'x-goog-user-project': 'jaxrent',
             'Content-Type': 'application/json; charset=utf-8'
         },
-        body: {
-            'q': 'the house is built with wood',
-            'target': 'fr-CA'
-        },
+        body: JSON.stringify({
+            q: 'the house is built with wood',
+            target: 'fr-CA'
+        })
     };
 
     fetch(apiUrl, requestOptions)
