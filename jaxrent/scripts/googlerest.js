@@ -61,6 +61,8 @@ function displayLanguage()
             return response.json();
         })
         .then(data => {
+            console.log(typeof(data));
+            console.log(data);
             var JSONData = JSON.stringify(data, null);
             outputElement.textContent = JSONData;
             let strLang = JSONData.find(lang => lang.language === "en");
