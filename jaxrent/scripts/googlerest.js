@@ -9,7 +9,6 @@ function test()
         method: 'POST',
         /*mode: 'no-cors',*/
         headers: {
-            /*'Authorization': 'Bearer AIzaSyBZ74oUzbj7rjjrff-L5QKh2ereQbugRko',*/
             'x-goog-user-project': 'jaxrent',
             'Content-Type': 'application/json; charset=utf-8'
         },
