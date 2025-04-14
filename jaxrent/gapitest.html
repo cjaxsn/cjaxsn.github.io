@@ -2,30 +2,10 @@
 <html lang="en">
 <head>
     <title>gAPI Test</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'nonce-EDNnf03nceIOfn39fn3e9h3sdfa' https://www.gstatic.com https://gstatic.com https://apis.google.com; script-src-elem https://www.gstatic.com https://gstatic.com https://apis.google.com">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://www.gstatic.com https://gstatic.com https://apis.google.com">
+    <!--<meta http-equiv="Content-Security-Policy" content="script-src-elem https://www.gstatic.com https://gstatic.com https://apis.google.com">-->
     <script src="https://apis.google.com/js/api.js"></script>
-    <script nonce="EDNnf03nceIOfn39fn3e9h3sdfa">
-        function start() {
-            // 2. Initialize the JavaScript client library.
-            gapi.client.init({
-                'apiKey': 'AIzaSyBZ74oUzbj7rjjrff-L5QKh2ereQbugRko',
-                // clientId and scope are optional if auth is not required.
-                'clientId': '834817355162-et4c65tspaboppjf2gj27q316fc7bh6j.apps.googleusercontent.com',
-                'scope': 'profile',
-            }).then(function() {
-                // 3. Initialize and make the API request.
-                return gapi.client.request({
-                    'path': 'https://people.googleapis.com/v1/people/me?requestMask.includeField=person.names',
-                })
-            }).then(function(response) {
-                console.log(response.result);
-            }, function(reason) {
-                console.log('Error: ' + reason.result.error.message);
-            });
-        };
-        // 1. Load the JavaScript client library.
-        gapi.load('client', start);
-    </script>
+    <script src="scripts/main.js"></script>
 </head>
 <body>
 gAPI test
