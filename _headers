@@ -1,2 +1,2 @@
 /jaxrent/*
-  Content-Security-Policy: script-src 'self' https://www.gstatic.com https://gstatic.com https://apis.google.com
+  Content-Security-Policy: script-src 'self' 'unsafe-inline' https://www.gstatic.com https://gstatic.com https://apis.google.com
