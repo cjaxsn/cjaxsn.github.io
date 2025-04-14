@@ -7,7 +7,7 @@ function test()
 
     const requestOptions = {
         method: 'POST',
-        mode: 'no-cors',
+        /*mode: 'no-cors',*/
         headers: {
             /*'Authorization': 'Bearer AIzaSyBZ74oUzbj7rjjrff-L5QKh2ereQbugRko',*/
             'x-goog-user-project': 'jaxrent',
