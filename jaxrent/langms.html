@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Microsoft Language Translator API Test</title>
+    <script>
+        function test()
+        {
+            const outputElement = document.getElementById('output');
+
+            const apiKey = '';
+            const apiUrl = 'https://api.cognitive.microsofttranslator.com/translate';
+
+            const requestOptions = {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer APIKEY',
+                    'x-goog-user-project': 'jaxrent',
+                    'Content-Type': 'application/json; charset=utf-8'
+                },
+                body: {
+                    'api-version': '3.0',
+                    'from': 'en',
+                    'to': 'fr-CA',
+                    'text': 'the house is built with wood'
+                },
+            };
+
+            fetch(apiUrl, requestOptions)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    outputElement.textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</head>
+<body>
+<input type="button" onclick="test()" value="Test API">
+<div id="output"></div>
+</body>
+</html>

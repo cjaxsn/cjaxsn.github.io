@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yandex Language Translator API Test</title>
+  <script>
+    function test()
+    {
+      const outputElement = document.getElementById('output');
+
+      const apiKey = '';
+      const apiUrl = 'POST https://translate.api.cloud.yandex.net/translate/v2/translate';
+
+      const requestOptions = {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Api-Key APIKEY',
+        },
+        body: {
+          'sourceLanguageCode':'en',
+          'targetLanguageCode':'fr-CA',
+          'format':'PLAIN_TEXT',
+          'texts': [
+            'the house is built with wood'
+          ],
+          'q': 'the house is built with wood',
+          'target': 'fr-CA'
+        },
+      };
+
+      fetch(apiUrl, requestOptions)
+              .then(response => {
+                if (!response.ok) {
+                  throw new Error('Network response was not ok');
+                }
+                return response.json();
+              })
+              .then(data => {
+                outputElement.textContent = JSON.stringify(data, null, 2);
+              })
+              .catch(error => {
+                console.error('Error:', error);
+              });
+    }
+  </script>
+</head>
+<body>
+<input type="button" onclick="test()" value="Test API">
+<div id="output"></div>
+</body>
+</html>
