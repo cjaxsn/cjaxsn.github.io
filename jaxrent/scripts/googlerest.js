@@ -21,7 +21,7 @@ function test()
     fetch(apiUrl, requestOptions)
         .then(response => {
             if (!response.ok) {
-                console.log("response.status=" + response.status);
+                console.log("response.status=" + response.status + "response.statusText=" + response.statusText + "response.URL=" + response.URL);
                 throw new Error('Network response was not ok');
             }
             return response.json();
