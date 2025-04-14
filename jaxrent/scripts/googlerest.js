@@ -36,6 +36,7 @@ function translateTest()
 function displayLanguage()
 {
     const outputElement = document.getElementById('divLanguageDisplay');
+    var strLang = document.getElementById('txtLanguage').value;
 
     const apiUrl = 'https://translation.googleapis.com/language/translate/v2/languages?key=AIzaSyDAL-P6lY5iERPG63rGIls1ZEYlzGMOjbY';
 
@@ -45,7 +46,7 @@ function displayLanguage()
             'Content-Type': 'application/json; charset=utf-8'
         },
         body: JSON.stringify({
-            target: document.getElementById('txtLanguage').value
+            target: strLang
         })
     };
 
