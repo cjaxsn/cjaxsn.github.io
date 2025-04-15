@@ -1,7 +1,7 @@
 const apiKey = "EsKz28O4Rahm36QLE56U4qVd6i95BdP2xpgLp179TvFEjr12Rct4JQQJ99BDACYeBjFXJ3w3AAAbACOGDvrE"; // Replace with your Azure AI Translator API key
 const endpoint = "https://api.cognitive.microsofttranslator.com";
 const region = "eastus"; // Required for multi-service or regional resources
-const sourceLanguage = "en";
+const sourceLanguage = document.getElementById('txtLanguage').value;
 const targetLanguage = "fr";
 const textToTranslate = "Hello, how are you?";
 
@@ -28,7 +28,7 @@ async function translateText() {
         if (response.ok) {
             const translatedText = data[0].translations[0].text;
             console.log(`Translated text: ${translatedText}`);
-            document.getElementById("translatedText").innerHTML = translatedText;
+            document.getElementById("divOutput").innerHTML = translatedText;
         } else {
             console.error(`Error: ${data.error.message}`);
         }
