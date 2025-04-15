@@ -16,6 +16,7 @@ async function translateText() {
                 method: 'POST',
                 headers: {
                     'Ocp-Apim-Subscription-Key': apiKey,
+                    'Ocp-Apim-Subscription-Region': region,
                     'Content-Type': 'application/json'
                 },
                 body: body
