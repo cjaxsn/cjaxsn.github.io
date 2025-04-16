@@ -60,7 +60,7 @@ async function getLanguages() {
         const data = await response.json();
 
         if (response.ok) {
-            const supportedLanguages = response.json();
+            const supportedLanguages = data;
             console.log(`Languages: ${supportedLanguages}`);
             document.getElementById("divLanguages").innerHTML = supportedLanguages;
         } else {
