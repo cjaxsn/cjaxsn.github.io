@@ -60,7 +60,7 @@ async function getLanguages() {
         const data = await response.json();
 
         if (response.ok) {
-            const translatedText = data[0].translation[0].text;
+            const translatedText = data[0];
             console.log(`Translated text: ${translatedText}`);
             document.getElementById("divLanguages").innerHTML = translatedText;
         } else {
