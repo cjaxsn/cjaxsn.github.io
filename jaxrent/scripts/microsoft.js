@@ -1,5 +1,6 @@
 const apiKey = "EsKz28O4Rahm36QLE56U4qVd6i95BdP2xpgLp179TvFEjr12Rct4JQQJ99BDACYeBjFXJ3w3AAAbACOGDvrE"; // Replace with your Azure AI Translator API key
 const endpoint = "https://api.cognitive.microsofttranslator.com";
+const supportedlanguagesendpoint = "https://api.cognitive.microsofttranslator.com/languages?api-version=3.0";
 const region = "eastus"; // Required for multi-service or regional resources
 const sourceLanguage = "en";
 var targetLanguage = "fr";
@@ -38,3 +39,35 @@ async function translateText() {
     }
 }
 
+async function listSupportedLanguages() {
+    targetLanguage = document.getElementById('txtLanguage').value;
+    const route = `/translate?api-version=3.0&from=${sourceLanguage}&to=${targetLanguage}`;
+    const body = JSON.stringify([{ "Text": textToTranslate }]);
+
+    try {
+        const response = await fetch(
+            `${supportedlanguagesendpoint}${route}`,
+            {
+                method: 'GET',
+                headers: {
+                    'Ocp-Apim-Subscription-Key': apiKey,
+                    'Ocp-Apim-Subscription-Region': region,
+                    'Content-Type': 'application/json'
+                },
+                body: body
+            }
+        );
+
+        const data = await response.json();
+
+        if (response.ok) {
+            const translatedText = data[0].translations[0].text;
+            console.log(`Translated text: ${translatedText}`);
+            document.getElementById("divOutput").innerHTML = translatedText;
+        } else {
+            console.error(`Error: ${data.error.message}`);
+        }
+    } catch (error) {
+        console.error(`Fetch error: ${error}`);
+    }
+}
