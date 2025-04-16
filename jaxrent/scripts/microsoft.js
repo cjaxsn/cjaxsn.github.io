@@ -40,7 +40,7 @@ async function translateText() {
 
 async function getLanguages() {
     targetLanguage = document.getElementById('txtLanguage').value;
-    const route = 'languages?api-version=3.0';
+    const route = '/languages?api-version=3.0';
     //const body = JSON.stringify([{ "Text": textToTranslate }]);
 
     try {
