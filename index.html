@@ -35,9 +35,9 @@
 </head>
 <body class="w3-light-grey">
 <!-- Sidebar -->
-<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="sitenav">
     <br/><br/>
-    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <button onclick="nav_close()" class="w3-bar-item w3-large">Close &times;</button>
     <a class="w3-bar-item w3-button w3-hover-theme" href="#overview">Overview</a>
     <a class="w3-bar-item w3-button w3-hover-theme" href="#skills">Skills</a>
     <a class="w3-bar-item w3-button w3-hover-theme" href="#workexperience">Work Experience</a>
@@ -47,7 +47,7 @@
 
 <!-- Page Content -->
 <div class="w3-theme sticky">
-    <button class="w3-button w3-theme w3-xlarge" onclick="w3_open()">☰</button> Professional CV - Corey Jackson
+    <button class="w3-button w3-theme w3-xlarge" onclick="nav_open()">☰</button> Professional CV - Corey Jackson
     <div class="w3-container">
 
     </div>
@@ -55,12 +55,12 @@
 
 
 <script>
-    function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
+    function nav_open() {
+        document.getElementById("sitenav").style.display = "block";
     }
 
-    function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
+    function nav_close() {
+        document.getElementById("sitenav").style.display = "none";
     }
 </script>
 <!-- Page Container -->
