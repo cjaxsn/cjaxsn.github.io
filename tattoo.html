@@ -16,12 +16,11 @@
             writing-mode: vertical-lr;
             text-orientation: upright;
             font-size: 20pt;
-            display: inline-block;
-            padding: 10px;
         }
 
         .table {
             display: flex;
+            padding: 10px;
         }
 
         .column {
@@ -31,9 +30,20 @@
 
         .row {
             border: 1px black solid;
-            /*height: 3em;*/
+            height: 150px;
             margin: auto;
             width: 100%;
+            white-space: nowrap;
+            padding: 2px;
+        }
+
+        .th {
+            border: 1px black solid;
+            height: auto;
+            margin: auto;
+            width: 100%;
+            white-space: nowrap;
+            padding: 2px;
         }
 
     </style>
@@ -42,10 +52,30 @@
 <h1>Tattoo Idea's</h1>
 <div class="table">
     <div class="column">
-        <div>All About Love</div>
-        <div class="row vertical">abc</div>
+        <div class="th">Term</div>
+        <div class="row">All About Love</div>
+        <div class="row">Love</div>
+    </div>
+    <div class="column">
+        <div class="th">Location</div>
+        <div class="row">Side Ribs</div>
+        <div class="row">Chest</div>
+    </div>
+    <div class="column">
+        <div class="th">Japanese</div>
         <div class="row vertical">愛について</div>
-        <div class="row">關於愛情的一切</div>
+        <div class="row vertical">愛</div>
+    </div>
+    <div class="column">
+        <div class="th">Chinese</div>
+        <div class="row vertical">關於愛情的一切</div>
+        <div class="row vertical">爱</div>
+    </div>
+</div>
+<!--
+    <div class="column"></div>
+        <div class="row vertical">Chinese</div>
+        <div class="row"></div>
         <div class="row">全部都係關於愛</div>
         <div class="row">사랑에 관한 모든 것</div>
     </div>
@@ -58,8 +88,9 @@
         <div class="row"></div>
         <div class="row"></div>
         <div class="row"></div>
-    </div>
-</div>
+    </div>-->
+
+<!--
  <table class="">
      <tr>
          <th>Term</th>
@@ -86,5 +117,6 @@
          <td class="vertical">사랑</td>
      </tr>
   </table>
+  -->
  </body>
 </html>
