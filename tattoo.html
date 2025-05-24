@@ -5,14 +5,13 @@
     <title>Tattoo Ideas</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <style>
-        div{
+        /*div{
             writing-mode: vertical-lr;
             border: solid black 1px;
             display: inline-block;
-            /*height: 350px;
-            width: 300px;*/
+
             padding: 10px;
-        }
+        }*/
         .vertical {
             writing-mode: vertical-lr;
             text-orientation: upright;
@@ -21,10 +20,46 @@
             padding: 10px;
         }
 
+        .table {
+            display: flex;
+        }
+
+        .column {
+            margin-bottom: 1em;
+            width: 100%;
+        }
+
+        .row {
+            border: 1px black solid;
+            /*height: 3em;*/
+            margin: auto;
+            width: 100%;
+        }
+
     </style>
 </head>
 <body>
 <h1>Tattoo Idea's</h1>
+<div class="table">
+    <div class="column">
+        <div>All About Love</div>
+        <div class="row vertical">abc</div>
+        <div class="row vertical">愛について</div>
+        <div class="row">關於愛情的一切</div>
+        <div class="row">全部都係關於愛</div>
+        <div class="row">사랑에 관한 모든 것</div>
+    </div>
+    <div class="column">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+    </div>
+    <div class="column">
+        <div class="row"></div>
+        <div class="row"></div>
+        <div class="row"></div>
+    </div>
+</div>
  <table class="">
      <tr>
          <th>Term</th>
