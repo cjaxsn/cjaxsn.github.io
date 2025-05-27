@@ -42,6 +42,28 @@
             top: 0;
             z-index: 1000;
         }
+
+        /*detect dark mode: https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme, example on https://symfony.com/*/
+
+        /* Light mode */
+        /*
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: white;
+                color: black;
+            }
+        }
+        */
+
+        /* Dark mode */
+        /*
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black;
+                color: white;
+            }
+        }
+        */
     </style>
 </head>
 <body class="w3-light-grey">
