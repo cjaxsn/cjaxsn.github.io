@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contact</title>
+    <meta name="robots" content="noindex">
+    <script src="js/aes.js"></script>
+    <script>
+        function auth()
+        {
+            var encrypted = CryptoJS.AES.encrypt(document.getElementById("txtPassword").value, "Secret Passphrase");
+            var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
+            //console.log(decrypted.toString());
+
+            if (decrypted.toString() === "52616e6369643131")
+            {
+                document.getElementById("divContent").style.display = "block";
+            }
+            else
+            {
+                document.getElementById("divContent").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="password" id="txtPassword">
+<input type="button" onclick="auth();" value="Auth">
+<div id="divContent" style="display: none;">
+    Madi 705.698.4732<br/>
+    Linda 919.1873<br/>
+    Dad 626.4335<br/>
+    Victoria 437.983.3367<br/>
+    Timmy 705.698.4639<br/>
+    Z 437.986.9002<br/>
+    Marianne 905.933.6041
+</div>
+</body>
+</html>
