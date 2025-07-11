@@ -14,26 +14,49 @@
 
             if (decrypted.toString() === "52616e6369643131")
             {
-                document.getElementById("divContent").style.display = "block";
+                document.getElementById("textCanvas").style.display = "block";
             }
             else
             {
-                document.getElementById("divContent").style.display = "none";
+                document.getElementById("textCanvas").style.display = "none";
             }
         }
     </script>
+    <style>
+        #textCanvas {
+            border: 1px black solid;
+        }
+    </style>
 </head>
 <body>
 <input type="password" id="txtPassword">
 <input type="button" onclick="auth();" value="Auth">
-<div id="divContent" style="display: none;">
-    Madi 705.698.4732<br/>
-    Linda 919.1873<br/>
-    Dad 626.4335<br/>
-    Victoria 437.983.3367<br/>
-    Timmy 705.698.4639<br/>
-    Z 437.986.9002<br/>
-    Marianne 905.933.6041
-</div>
+<br/><br/>
+<canvas id="textCanvas" width="400" height="200" style="display: none;"></canvas>
+<img id="image"/>
+<script>
+    var tCtx = document.getElementById('textCanvas').getContext('2d'),
+        imageElem = document.getElementById('image');
+
+    var intLineHeight = 20;
+    var intLineIncr = 20;
+    tCtx.canvas.width = 400;
+    tCtx.font = "16px serif";
+    tCtx.fillText("Madi 705.698.4732", 0, intLineHeight);
+    intLineHeight += intLineIncr;
+    tCtx.fillText("Linda 919.1873", 0, intLineHeight);
+    intLineHeight += intLineIncr;
+    tCtx.fillText("Dad 626.4335", 0, intLineHeight);
+    intLineHeight += intLineIncr;
+    tCtx.fillText("Victoria 437.983.3367", 0, intLineHeight);
+    intLineHeight += intLineIncr;
+    tCtx.fillText("Timmy 705.698.4639", 0, intLineHeight);
+    intLineHeight += intLineIncr;
+    tCtx.fillText("Z 437.986.9002", 0, intLineHeight);
+    intLineHeight += intLineIncr;
+    tCtx.fillText("Marianne 905.933.6041", 0, intLineHeight);
+    //imageElem.src = tCtx.canvas.toDataURL(); //copy canvas data to image
+    //console.log(imageElem.src);
+</script>
 </body>
 </html>
